@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Firm directory</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="firms">
+<main>
+  <div class="pagehead">
+    <div><p class="muted">REFERENCE · firms / agencies, account managers, DocuSign status</p><h1>Firm directory <span class="note">1</span></h1></div>
+    <div class="row"><span class="btn sm mgr-only" style="display:inline-flex">⬆ Import sheet / report</span><span class="btn sm">Export</span></div>
+  </div>
+
+  <section class="box">
+    <div class="grid g4">
+      <label class="field">Search<span class="in">firm name, agency #, or AM</span></label>
+      <label class="field">Account manager<span class="in">All ▾</span></label>
+      <label class="field">DocuSign approved<span class="in">All / Yes / No ▾</span></label>
+      <label class="field">Line<span class="in">MMSD ▾</span></label>
+    </div>
+  </section>
+
+  <section class="box">
+    <header><h3>Firms <span class="note">2</span></h3><span class="muted">Last import: 10/15/2026 from "AM firm assignments" report · 412 firms</span></header>
+    <table class="wf">
+      <tr><th>Firm / agency #</th><th>Firm</th><th>Account manager</th><th>Backup AM</th><th>DocuSign approved</th><th>Firm rules</th><th>Updated</th><th></th></tr>
+      <tr><td>12345</td><td>Edward Jones</td><td>AM name</td><td>AM name</td><td><span class="pill dark">✔ Yes</span></td><td><a>EDJ overlay ↗</a></td><td>10/15 import</td><td><span class="btn sm">Edit</span></td></tr>
+      <tr><td>23456</td><td>Firm B</td><td>AM name</td><td>—</td><td><span class="pill">✕ No: wet sign</span></td><td>—</td><td>10/02 by AM lead</td><td><span class="btn sm">Edit</span></td></tr>
+      <tr><td>34567</td><td>JP Morgan Chase</td><td>AM name</td><td>AM name</td><td><span class="pill dark">✔ Yes</span></td><td><a>JPMC rules (NY Reg 187 by firm) ↗</a></td><td>10/15 import</td><td><span class="btn sm">Edit</span></td></tr>
+    </table>
+  </section>
+
+  <div class="grid g2">
+    <section class="box">
+      <h3>Where it's used <span class="note">3</span></h3>
+      <div class="check">Workstation: typing the firm/agency # fills in the account manager (CC on emails) and the firm overlay steps</div>
+      <div class="check">DocuSign = No → a watch-out "Firm is not DocuSign approved: wet signatures / MM DocuSign" and the email offers wet-sign instructions</div>
+      <div class="check">Reissue tool and the AM version use the same list</div>
+    </section>
+    <section class="box mgr-only">
+      <h3>Import <span class="note">4</span></h3>
+      <div class="ph drop">Drop the firm/AM sheet (Excel/CSV) or the scheduled report export here</div>
+      <p class="muted">Preview: 3 new · 7 changed AMs · 2 DocuSign status changes · 0 errors → <span class="btn sm pri">Apply</span></p>
+    </section>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes · Firm directory</h2>
+    <ol>
+      <li>One shared list of firm/agency # → account manager, backup, and DocuSign approval. It replaces typing the AM on every case.</li>
+      <li>Three ways to keep it current (your answer): <b>managers</b> and the <b>AM team lead</b> can edit any row in the site, and the existing <b>sheet/report</b> can be imported. Every change logs who made it and when.</li>
+      <li>The workstation and email builder read it automatically. A CM can still override the AM on a single case.</li>
+      <li>Import shows a preview of changes before applying, so a bad file can't wipe the list. Later the report import can run on a schedule.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Reissue / change after approval</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="reissue">
+<main>
+  <div class="pagehead">
+    <div><p class="muted"><a href="tools-hub.html">Tools</a> › Reissue / change after approval · for CMs and account managers</p>
+      <h1>Reissue &amp; change-after-approval tool <span class="note">1</span></h1></div>
+    <div class="row"><span class="btn sm">Reset</span><a class="btn sm" href="workstation-merge.html#design">Open case in workstation</a></div>
+  </div>
+
+  <div class="box" style="margin-bottom:12px">
+    <h3>1 · What kind of request? <span class="note">2</span></h3>
+    <div class="row">
+      <span class="btn sm pri">Change after approval (not issued)</span>
+      <span class="btn sm">90-day reissue (field request)</span>
+      <span class="btn sm">Home Office error / internal reissue</span>
+    </div>
+    <div class="grid g4" style="margin-top:10px">
+      <label class="field">Contract state<span class="in">NY / other ▾</span></label>
+      <label class="field">System<span class="in">WinRisk / TPP ▾</span></label>
+      <label class="field">Policy status<span class="in">Approved / Mailed-unreported / Reported ▾</span></label>
+      <label class="field">Firm / agency #<span class="in">12345 ▾</span></label>
+    </div>
+  </div>
+
+  <div class="tool-layout">
+    <section class="box">
+      <h3>2 · Before → after <span class="note">3</span></h3>
+      <div class="ph drop">⬇ Drop the current illustration and the new one (optional) to pre-fill both columns</div>
+      <table class="wf" style="margin-top:8px">
+        <tr><th>Item</th><th>Before</th><th>After</th></tr>
+        <tr><td>Plan</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+        <tr><td>Base face</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+        <tr><td>Riders</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+        <tr><td>Annualized premium</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+        <tr><td>Risk class</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+        <tr><td>Owner / bene / assignment</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+        <tr><td>DOB / name / SSN / gender</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+        <tr><td>Save Age / age change</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+        <tr><td>1035 amount</td><td><span class="in">…</span></td><td><span class="in">…</span></td></tr>
+      </table>
+      <div class="grid g3" style="margin-top:8px">
+        <label class="field">Reason<span class="in">Field/client / UW required ▾</span></label>
+        <label class="field">UW Note pre-approval<span class="in">Yes up to $x / No ▾</span></label>
+        <label class="field">Reinsurance<span class="in">None / QS / QS+MA / Non-QS ▾</span></label>
+        <label class="field">Alternate or additional?<span class="in">Y / N ▾</span></label>
+        <label class="field">Concurrent policies<span class="in">auto from linked policies ✎</span></label>
+        <label class="field">Part 1 / Part 2 dates<span class="in">…</span></label>
+      </div>
+    </section>
+
+    <section class="stack">
+      <div class="box">
+        <h3>3 · Approvals needed <span class="note">4</span></h3>
+        <table class="wf">
+          <tr><th>Change</th><th>UW</th><th>NY suitability</th></tr>
+          <tr><td>Face increase above UW Note amount</td><td><b>Yes</b></td><td>Yes (if NY)</td></tr>
+          <tr><td>Premium change</td><td>No</td><td>Yes (if NY, not frequency-only)</td></tr>
+        </table>
+        <p class="muted">Source: Quest UW Referral Table / UW &amp; Reg 187 Table ↗ · edge cases say "check Quest"</p>
+      </div>
+      <div class="box">
+        <h3>4 · System steps</h3>
+        <div class="check">WinRisk: UW Req #2 · Misc REDESIGN (or REISSUE) · Subject to Review</div>
+        <div class="check">WinRisk: Issue Req #2 · HOLD pending UW re-review (approved status)</div>
+        <div class="check">Final Suitability Validation req stays open / reopen (NY)</div>
+        <div class="check">After approval: amendments, revised illustration to TreX, Supplement to Application if needed</div>
+        <div class="check">UW approval expires if reissue not completed within 30 days</div>
+      </div>
+      <div class="box">
+        <h3>5 · Email <span class="note">5</span></h3>
+        <label class="field">Template<span class="in">Change Request After UW Approval / NY Change after UW Approval-Reissue / F6126 cover (90-day) / HO Error-Correction ▾</span></label>
+        <div class="out">Subject: Redesign – … <br/>Originally approved as: …<br/>Request after approval: …<br/>…</div>
+        <div class="row" style="margin-top:8px"><button class="btn sm pri" data-compose="cap-uw">✉ Send email</button><span class="btn sm">Open in Outlook</span><span class="btn sm">Copy</span><span class="btn sm">Save to case</span></div>
+      </div>
+    </section>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes · Reissue tool</h2>
+    <ol>
+      <li>Standalone tool for CMs and account managers (AMs handle most reissues). It uses the same engine as the workstation's "Change after approval" button. Open a saved case and everything pre-fills.</li>
+      <li>Three paths, following the MMSD AM &amp; CM Reissue Processing topic:
+        <ul>
+          <li><b>Change after approval:</b> REDESIGN.</li>
+          <li><b>90-day reissue:</b> F6126 checklist (MMSD + agency #, PAC note, illustration if the premium changes, new HIPAA if the DOB changes) sent to the reissue board.</li>
+          <li><b>HO error/internal:</b> no F6126; amendments, revised illustration, Supplement to Application, and the HO Error/Correction email to the correct internal board.</li>
+        </ul>
+        Internal board addresses are shown to staff only, never put in field emails.</li>
+      <li>Before/after can be pre-filled from two illustrations. Only changed rows are highlighted and sent to the referral check.</li>
+      <li>The referral check is driven by the Quest tables (non-NY / NY). It shows UW and suitability separately, with the reason for each "Yes".</li>
+      <li>Fills your two Outlook templates field by field, plus F6126 and HO Error templates. Subject prefix (Redesign / Reissue / PL), Urgent flag, and the concurrent policy list are added automatically.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

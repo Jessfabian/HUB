@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Profile &amp; settings</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="profile">
+<main>
+  <div class="pagehead">
+    <div><p class="muted">Opened from your name (top right) · who is using the workstation until single sign-on</p><h1>Profile &amp; settings <span class="note">1</span></h1></div>
+    <div class="row"><span class="btn sm">+ Add CM</span><span class="btn sm pri">Save</span></div>
+  </div>
+
+  <div class="row">
+    <aside class="box" style="width:260px;flex:none">
+      <h3>Working as <span class="note">2</span></h3>
+      <label class="field">Pick yourself<select data-roster class="in" style="width:100%;box-sizing:border-box"></select></label>
+      <p class="muted">Loaded from the team roster (CM Team 1, CM Team 2, India GCC). Remembered on this computer.</p>
+      <div class="box" style="background:var(--sky-10)">
+        <b data-me-first>CM name</b><div class="muted" data-me-team>Team</div><div class="muted" data-me-email>email</div>
+      </div>
+      <div class="photo-card">
+        <img data-my-photo src="icons/profile.png" alt="My photo" />
+        <div class="stack">
+          <label class="btn sm">?? Upload photo<input type="file" accept="image/*" data-photo-up hidden></label>
+          <button type="button" class="btn sm" data-photo-rm>Remove photo</button>
+        </div>
+      </div>
+      <p class="muted mgr-only">Manager: <span class="btn sm">Edit roster</span> add, move, or deactivate people.</p>
+    </aside>
+
+    <section style="flex:1;min-width:0" class="stack">
+      <div class="box">
+        <h3>Details</h3>
+        <div class="grid g3">
+          <label class="field">Name<span class="in" data-me-name>Last, First</span></label>
+          <label class="field">CM team<span class="in" data-me-team>Team ▾</span></label>
+          <label class="field">Email<span class="in" data-me-email>from roster</span></label>
+          <label class="field">Time zone<span class="in">Eastern ▾</span></label>
+          <label class="field">Work location<span class="in">Remote / Hybrid / In office ▾</span></label>
+          <label class="field">Role<span class="in">Case manager / Lead / Trainer / Manager ▾</span></label>
+          <label class="field">Start date<span class="in">mm/dd/yyyy · used for "new hire" in Team insights</span></label>
+          <label class="field">Out of office<span class="in">dates · backup CM ▾</span></label>
+          <label class="field">Email signature<span class="in">used in generated emails ✎</span></label>
+          <label class="field">Default mode<span class="in">Guided / Expert ▾</span></label>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3><img class="ico" src="icons/settings.png" alt="" /> Settings <span class="note">5</span></h3>
+        <div class="grid g2">
+          <div>
+            <b>Timer</b>
+            <div class="check">Start the timer automatically when I open a case</div>
+            <div class="check">Ask for a reason when I pause</div>
+            <div class="check">Auto-pause after 10 min with no activity</div>
+          </div>
+          <div>
+            <b>Celebrations &amp; morale</b>
+            <div class="check">Show a celebration when I complete an IR</div>
+            <div class="check">Show badges and streak on Home</div>
+            <div class="check">Let teammates send me kudos (email copy: on)</div>
+          </div>
+          <div>
+            <b>Workstation</b>
+            <div class="check">Open new cases in Guided mode</div>
+            <div class="check">Keep the sidebar collapsed</div>
+            <div class="check"><a data-tour-replay>Replay Questy tours on all pages</a></div>
+          </div>
+          <div>
+            <b>Notifications</b>
+            <div class="check">A case is edited by someone else</div>
+            <div class="check">A case is reassigned to me</div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Trained on <span class="note">3</span></h3>
+        <table class="wf">
+          <tr><th>Case type</th><th>Status</th><th>Trained since</th></tr>
+          <tr><td>Trust-owned</td><td>✔ Trained</td><td>date</td></tr>
+          <tr><td>Corporate-owned</td><td>✔ Trained</td><td>date</td></tr>
+          <tr><td>Internal replacements</td><td>✔ Trained</td><td>date</td></tr>
+          <tr><td>External replacement / 1035 / 1035 with loan</td><td>In training</td><td>date</td></tr>
+          <tr><td>VUL (MMLIS)</td><td>Not trained</td><td>—</td></tr>
+          <tr><td>NY Reg 60 / Reg 187</td><td>Not trained</td><td>—</td></tr>
+          <tr><td>Unadmitted replacements</td><td>Not trained</td><td>—</td></tr>
+          <tr><td>Joint / survivorship</td><td>✔ Trained</td><td>date</td></tr>
+          <tr><td>UL Guard</td><td>✔ Trained</td><td>date</td></tr>
+          <tr><td>Reissues / change after approval</td><td>In training</td><td>date</td></tr>
+          <tr><td>+ add case type</td><td></td><td></td></tr>
+        </table>
+      </div>
+
+      <div class="box">
+        <h3>How the profile is used <span class="note">4</span></h3>
+        <div class="check">"Working as" selector in the top bar on every page</div>
+        <div class="check">New cases are owned by this CM; My cases defaults to "Mine"</div>
+        <div class="check">Generated emails use this name, email, and signature</div>
+        <div class="check">Opens the workstation in Guided automatically for case types marked "not trained" / "in training"</div>
+        <div class="check">Reassign list shows which CMs are trained for the case's profile</div>
+      </div>
+    </section>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes · CM profile</h2>
+    <ol>
+      <li>Now a settings page, opened from your name in the top-right menu (no longer in the sidebar). A stand-in for single sign-on: each CM picks themselves once with "Working as"; it's remembered on that computer. Later, SSO fills this in automatically and the selector goes away.</li>
+      <li>The people list comes from the team roster stored privately on the server (not in the code repository). Managers can edit it. India GCC uses only the listed associates.</li>
+      <li>Training matrix. Leads update it. The "trained since" date feeds Team insights, so managers can see IR time since someone learned a skill. The list of case types can be edited.</li>
+      <li>The profile makes the site smarter. If a case needs training this CM doesn't have yet (e.g. VUL), the workstation opens in Guided and shows a "new to you" tip. When reassigning, trained CMs are suggested first.</li>
+      <li>Personal settings for the timer, celebrations, and notifications. Celebrations can be turned off fully; the timer auto-start can be turned off, but IRs then need a manual start.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

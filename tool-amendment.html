@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Amendment generator</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="amend">
+<main>
+  <div class="pagehead">
+    <div><p class="muted"><a href="tools-hub.html">Tools</a> › Amendment generator · <em>Today: amendments section</em></p><h1>Amendment generator <span class="note">1</span></h1></div>
+    <div class="row"><span class="btn sm">Reset</span><a class="btn sm" href="workstation-merge.html">Open in workstation</a></div>
+  </div>
+  <div class="tool-layout">
+    <section class="box">
+      <h3>Inputs <span class="note">2</span></h3>
+      <div class="grid g2"><label class="field">Amendment type<span class="in">Face amount / Rider / Beneficiary / Owner ▾</span></label><label class="field">Field<span class="in">▾</span></label><label class="field">Was<span class="in">…</span></label><label class="field">Change to<span class="in">…</span></label><label class="field cond">Signer(s) required<span class="in">auto from owner type</span></label><span class="btn sm">+ add another change</span></div>
+    </section>
+    <section class="box">
+      <h3>Output <span class="note">3</span></h3>
+      <div class="out">Amend the application to show…</div>
+      <div class="row" style="margin-top:10px"><span class="btn sm pri">Copy</span><span class="btn sm">Send to case output</span><span class="btn sm">Clear</span></div>
+    </section>
+  </div>
+  <section class="notes">
+    <h2>Design notes · Amendment generator</h2>
+    <ol><li>Supports multiple changes in one amendment.</li><li>Signer rule is derived (e.g. trust means trustees sign).</li><li>Output matches today's wording format.</li></ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

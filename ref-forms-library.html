@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Forms library</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="forms">
+<main>
+  <div class="pagehead"><div><p class="muted">REFERENCE · today: forms-library.html</p><h1>Forms library <span class="note">1</span></h1></div></div>
+  <div class="row">
+    <section style="flex:1;min-width:0">
+      <div class="row" style="margin-bottom:10px"><label class="field" style="flex:1">Search<span class="in">type what you call it: "part 1", "owner form", "HIPAA", "HIV", "PAC", "POA", "trust cert", "bene form"</span></label><span class="note">2</span></div>
+      <table class="wf"><tr><th>Form</th><th>Name</th><th>Used when</th><th>Action</th></tr><tr><td>Part 1</td><td>Application for Life Insurance (Part 1)<br/><span class="aka">aka: part 1, app, application</span></td><td>Every case</td><td>Open (your state) · Copy link · Attach to email</td></tr><tr><td>F6734</td><td>Trust certificate<br/><span class="aka">aka: trust cert, trust form</span></td><td>Owner = Trust</td><td>Open · Attach to email</td></tr><tr><td>(by state)</td><td>Owner Designation Form<br/><span class="aka">aka: owner form, ODF, owner designation</span></td><td>Owner ≠ insured</td><td>Open (your state) · Attach to email</td></tr><tr><td>(by state)</td><td>HIPAA Authorization<br/><span class="aka">aka: HIPAA, auth, medical authorization</span></td><td>UW requirement</td><td>Open (your state) · Attach to email</td></tr><tr><td>FR2057</td><td>Corporate resolution<br/><span class="aka">aka: corp form, resolution</span></td><td>Owner = Corporation</td><td>Open · Attach to email</td></tr><tr><td>F7010</td><td>1035 loan carryover</td><td>Funding = 1035 + loan</td><td>Open · Attach to email</td></tr><tr><td>…</td><td>…</td><td>…</td><td>…</td></tr></table>
+    </section>
+    <aside class="box" style="width:260px;flex:none"><h3>Filters <span class="note">3</span></h3><label class="field">State<span class="in">from open case / pick ▾</span></label><p class="muted"><b>Most used</b> (pinned): Part 1 · Owner form · HIPAA · HIV · PAC · POA · Trust cert · Bene form</p><div class="check">Owner type</div><div class="check">Replacement / 1035</div><div class="check">State-specific</div><div class="check">Product</div></aside>
+  </div>
+  <section class="notes"><h2>Design notes · Forms library</h2><ol><li>Same content as today's forms library, in the shared shell.</li><li>Search by <b>everyday names</b>: each form has nicknames (part 1, owner form, HIPAA, HIV, PAC, POA, trust cert, bene form…). Search forgives typos and partial words. One result per form; the state picker (or the open case) picks the right state version.</li><li>The 'Used when' column links each form to the profile answer that triggers it. 'Attach to email' adds the correct state version to the open case's email.</li></ol></section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

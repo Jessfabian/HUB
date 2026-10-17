@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Home</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="home">
+<main>
+  <div class="hero">
+    <div>
+      <p><span data-greet>Good morning</span>, <b data-me-first>CM name</b>!<span class="note">6</span></p>
+      <h1>Ready for today's cases? <span class="note">1</span></h1>
+      <p>Start a case for step-by-step guidance, or jump straight to a tool.</p>
+      <div class="row">
+        <a class="btn pri" href="workstation-merge.html">+ Start MMSD case</a>
+      </div>
+    </div>
+    <div data-hero-widget></div>
+  </div>
+
+  <div class="grid g4">
+    <div class="box kpi"><img class="ico" src="icons/validated.png" alt="" /><b>3</b><span class="muted">IRs done today</span></div>
+    <div class="box kpi"><img class="ico" src="icons/timer.png" alt="" /><b>38 min</b><span class="muted">Your avg IR (30 days) <span class="trend-good">▼ 6 min</span></span></div>
+    <div class="box kpi"><img class="ico" src="icons/fireworks.png" alt="" /><b>4 days</b><span class="muted">Streak of using the workstation</span></div>
+    <a class="box kpi" href="my-wins.html"><img class="ico" src="icons/trophy.png" alt="" /><b>New badge!</b><span class="muted">"First trust case" → My wins <span class="note">7</span></span></a>
+  </div>
+
+  <div class="grid" style="grid-template-columns: 2fr 1fr;">
+    <div class="stack">
+      <section class="box">
+        <header><h3>Continue where you left off <span class="note">2</span></h3><a href="case-queue.html" class="muted">All my cases →</a></header>
+        <table class="wf">
+          <tr><th>Insured</th><th>Profile</th><th>Stage</th><th>Progress</th><th></th></tr>
+          <tr><td><b>Tyrion Lannister</b><br/><small class="muted">77 000 001</small></td><td><span class="pill">WinRisk</span><span class="pill">Trust</span><span class="pill">1035 + loan</span></td><td>Initial review</td><td>8 / 21</td><td><a class="btn sm pri" href="workstation-merge.html?view=0">Resume</a></td></tr>
+          <tr><td><b>Jaime Lannister</b><br/><small class="muted">77 000 209</small></td><td><span class="pill">WL100</span><span class="pill">eSigned</span><span class="pill">BOT</span></td><td>Initial review</td><td>2 / 6</td><td><a class="btn sm pri" href="workstation-case-lannister.html?view=0">Resume</a></td></tr>
+          <tr><td><b>Arya Stark</b><br/><small class="muted">77 000 410</small></td><td><span class="pill">VUL</span><span class="pill">NY</span></td><td><span class="st ok">✔ Ready to issue</span></td><td>6 / 6</td><td><a class="btn sm" href="workstation-case-arya.html?view=1">View</a></td></tr>
+        </table>
+        <p class="muted">Saved on the team server · shows cases you own. <a href="case-queue.html">Team view →</a></p>
+      </section>
+
+      <section class="box">
+        <header><h3>Quick tools <span class="note">3</span></h3><a href="tools-hub.html" class="muted">All tools →</a></header>
+        <div class="grid g4">
+          <a class="box toolcard" href="tool-verbiage.html"><i><img src="icons/verbiage.png" alt="" /></i><div><b>Requirement verbiage</b></div><div class="muted">Build requirement wording</div></a>
+          <a class="box toolcard" href="tool-amendment.html"><i><img src="icons/amend.png" alt="" /></i><div><b>Amendments</b></div><div class="muted">Build amendment wording</div></a>
+          <a class="box toolcard" href="tool-email.html"><i><img src="icons/email.png" alt="" /></i><div><b>Email builder</b></div><div class="muted">IR / interim / delivery emails</div></a>
+          <a class="box toolcard" href="tool-illustration.html"><i><img src="icons/illus.png" alt="" /></i><div><b>Illustration validator</b></div><div class="muted">Part 1 vs illustration</div></a>
+          <a class="box toolcard" href="tool-save-age.html"><i><img src="icons/saveage.png" alt="" /></i><div><b>Save Age</b></div><div class="muted">Backdate &amp; eligibility</div></a>
+          <a class="box toolcard" href="tool-state-forms.html"><i><img src="icons/stateforms.png" alt="" /></i><div><b>State forms</b></div><div class="muted">Required forms by state</div></a>
+          <a class="box toolcard" href="ref-forms-library.html"><i><img src="icons/forms.png" alt="" /></i><div><b>Forms library</b></div><div class="muted">Search all forms</div></a>
+          <a class="box toolcard" href="ref-underwriting.html"><i><img src="icons/uw.png" alt="" /></i><div><b>Underwriting</b></div><div class="muted">UW reference</div></a>
+        </div>
+      </section>
+    </div>
+
+    <div class="stack">
+      <section class="box">
+        <h3>Start a guided case <span class="note">4</span></h3>
+        <label class="field">Product<span class="in">Whole Life ▾</span></label>
+        <label class="field">Signature<span class="in">eSigned ▾</span></label>
+        <label class="field">Owner<span class="in">Individual ▾</span></label>
+        <a class="btn pri" href="workstation-merge.html">Open workstation →</a>
+        <p class="muted">Fill the rest of the profile in the workstation.</p>
+      </section>
+      <section class="box">
+        <h3>Today's reminders <span class="note">5</span></h3>
+        <div class="check">IR due within 1 business day of ADE</div>
+        <div class="check">Interim emails go out when new contractual requirements arrive (scheduled follow-up is AM-owned)</div>
+        <div class="check">Issued policies out of Repair by 10 a.m.</div>
+      </section>
+      <section class="box">
+        <h3><img class="ico" src="icons/thumbsup.png" alt="" /> Kudos for you <span class="note">8</span></h3>
+        <p>"Thanks for catching the 1035 loan issue on my case!" (Bronn of the Blackwater)</p>
+        <a class="muted" href="my-wins.html">Send kudos →</a>
+      </section>
+      <section class="box">
+        <h3><img class="ico" src="icons/lightbulb.png" alt="" /> Tip of the day</h3>
+        <p class="muted">Joint policy? Each insured signs their own insured-signed forms (no signing for your spouse, even if you're a Lannister). One A1001 covers both.</p>
+      </section>
+      <section class="box">
+        <h3>Quest shortcuts</h3>
+        <div class="line l"></div><div class="line m"></div><div class="line l"></div><div class="line s"></div>
+      </section>
+    </div>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes</h2>
+    <ol>
+      <li>A single entry point for everyone. New CMs click "Start MMSD case"; experienced CMs go straight to tools.</li>
+      <li>Resume list of your saved cases (server-saved, team-shared). It shows profile pills and checklist progress.</li>
+      <li>Quick tools open each tool on its own (standalone/expert use). The same tools also appear inside workstation steps.</li>
+      <li>Shortcut: set the three biggest profile answers here and land in the workstation already filtered.</li>
+      <li>Static MMSD service standards, shown as reminders (not live data).</li>
+      <li>Until single sign-on: the CM picks themselves from the <b>Working as</b> selector (also in the top bar). Home then shows their cases, team, and pinned notes; generated emails use their signature.</li>
+      <li>Personal stats come from the case timer (auto-starts when a case opens; see the timer in the top bar). Only you see your own numbers here, and nothing is ranked. Badges celebrate milestones.</li>
+      <li>Optional kudos: teammates can thank each other. You can turn celebrations off in profile settings.</li><li><b>Hero widget</b> (round 6): pick one of four animated widgets with the chooser: live weather (date, time, and an animated sky), pet Questy, a breathing break, or pop-the-NIGO bubbles. Your choice is remembered.</li><li>All sample cases use made-up Game of Thrones names, fake policy numbers, and silly emails.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

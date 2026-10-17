@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · IR Workbench (Option 2 only)</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="workbench" data-option="side">
+<main>
+  <div class="pagehead">
+    <div>
+      <p class="muted">USED ONLY IN OPTION 2. In Option 1 these sections live inside the workstation steps.</p>
+      <h1>IR Workbench · Case B <span class="note">1</span></h1>
+    </div>
+    <div class="row"><a class="btn sm" href="workstation-side.html">◂ Back to guided checklist</a><span class="btn sm pri">Generate output</span></div>
+  </div>
+
+  <div class="row">
+    <nav class="box subnav">
+      <a class="on">Dashboard</a><a>Case setup</a><a>State requirements</a><a>TreX review</a><a>Replacement check</a>
+      <a>Requirements</a><a>Amendments</a><a>BINGO</a><a>Review output package</a><a>Email builder</a>
+      <span class="note">2</span>
+    </nav>
+
+    <section style="flex:1;min-width:0" class="stack">
+      <div class="box">
+        <header><h3>Case setup</h3><span class="muted">synced from workstation profile <span class="note">3</span></span></header>
+        <div class="grid g4">
+          <label class="field">Product<span class="in">Term ▾</span></label>
+          <label class="field">State<span class="in">▾</span></label>
+          <label class="field">Owner type<span class="in">Corporation ▾</span></label>
+          <label class="field">Signature<span class="in">eSigned ▾</span></label>
+        </div>
+      </div>
+      <div class="grid g2">
+        <div class="box"><h3>State requirements</h3><div class="line l"></div><div class="line m"></div><div class="line l"></div></div>
+        <div class="box"><h3>TreX review</h3><div class="check">BOT note reviewed</div><div class="check">Risk class vs illustration</div><div class="check">MIB / Rx hits</div></div>
+      </div>
+      <div class="grid g2">
+        <div class="box"><h3>Requirements</h3><div class="ph">Requirement picker + generated wording</div></div>
+        <div class="box"><h3>Amendments</h3><div class="ph">Amendment picker + generated wording</div></div>
+      </div>
+      <div class="box"><h3>Review output package <span class="note">4</span></h3><div class="out">IR note · requirements · amendments · email draft</div></div>
+    </section>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes · IR Workbench</h2>
+    <ol>
+      <li>The existing <code>initial-review.html</code> is kept and only re-skinned in the shared shell (same nav, header, and colors). This page appears only when you choose Option 2.</li>
+      <li>The section list is unchanged from today, so experienced CMs lose nothing.</li>
+      <li>New: profile answers carry over from the workstation so nothing is typed twice. Both pages read the same saved case on the server.</li>
+      <li>The output package and email builder work exactly as today.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

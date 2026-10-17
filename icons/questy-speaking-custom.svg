@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="questy" viewBox="0 0 600 520" role="img" aria-labelledby="qTitle qDesc" xmlns="http://www.w3.org/2000/svg" class="idle-blink anim-talk" style="--anim-speed: 1.000s; --anim-intensity: 1;" width="600" height="520">
+<title id="qTitle">Questy, a customizable website helper bot</title><desc id="qDesc">A rounded blue helper robot with a pink bow, eyelashes, rosy cheeks, an antenna, and a happy face.</desc>
+<defs><linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1"><stop id="bodyLight" offset="0" stop-color="#7ee5ff"/><stop id="bodyDark" offset="1" stop-color="#54bbda"/></linearGradient><linearGradient id="bowGrad"><stop id="bowLight" offset="0" stop-color="#ff69ae"/><stop id="bowDark" offset="1" stop-color="#ea478c"/></linearGradient><style>
+#questy{--anim-speed:1s;--anim-intensity:1}
+#questy .eye-lid,#questy .eye-look,#questy .mouth,#questy .talk-waves,#questy #hand,#questy #waveG,#questy #typingFinger,#questy #scanLine{transform-box:fill-box;transform-origin:center}
+#questy #antennaG{transform-box:fill-box;transform-origin:50% 100%}
+#questy .mouth{transform-origin:50% 20%}
+#questy.paused,#questy.paused *{animation-play-state:paused!important}
+#questy.idle-blink .eye-lid{animation:qIdleBlink 4.8s ease-in-out infinite}
+#questy.anim-float{animation:qFloat var(--anim-speed) ease-in-out infinite}
+#questy.anim-bounce{animation:qBounce var(--anim-speed) ease-in-out infinite}
+#questy.anim-pulse{animation:qPulse var(--anim-speed) ease-in-out infinite}
+#questy.anim-dance{animation:qDance var(--anim-speed) ease-in-out infinite}
+#questy.anim-nod{animation:qNod var(--anim-speed) ease-in-out infinite;transform-origin:50% 62%}
+#questy.anim-shake{animation:qShake var(--anim-speed) ease-in-out infinite}
+#questy.anim-spin{animation:qSpin var(--anim-speed) ease-in-out infinite}
+#questy.anim-celebrate{animation:qCelebrate var(--anim-speed) ease-in-out infinite}
+#questy.anim-laugh{animation:qLaughBody var(--anim-speed) ease-in-out infinite}
+#questy.anim-giggle{animation:qGiggle var(--anim-speed) ease-in-out infinite}
+#questy.anim-breathe{animation:qBreathe var(--anim-speed) ease-in-out infinite;transform-origin:50% 75%}
+#questy.anim-sway{animation:qSway var(--anim-speed) ease-in-out infinite;transform-origin:50% 90%}
+#questy.anim-peek{animation:qPeek var(--anim-speed) ease-in-out infinite}
+#questy.anim-hop{animation:qHop var(--anim-speed) ease-in-out infinite}
+#questy.anim-wiggle{animation:qWiggle var(--anim-speed) ease-in-out infinite}
+#questy.anim-listen{animation:qListen var(--anim-speed) ease-in-out infinite;transform-origin:50% 80%}
+#questy.anim-cheer{animation:qCheer var(--anim-speed) ease-in-out infinite}
+#questy.anim-glow{animation:qGlow var(--anim-speed) ease-in-out infinite}
+#questy.anim-heartBeat{animation:qHeart var(--anim-speed) ease-in-out infinite}
+#questy.anim-startled{animation:qStartled var(--anim-speed) ease-in-out infinite}
+#questy.anim-wave #hand{animation:qHandWave var(--anim-speed) ease-in-out infinite}
+#questy.anim-wave #waveG{animation:qWaveMarks var(--anim-speed) ease-in-out infinite}
+#questy.anim-cheer #hand{animation:qHandWave calc(var(--anim-speed)*.55) ease-in-out infinite}
+#questy.anim-antenna #antennaG{animation:qAntenna var(--anim-speed) ease-in-out infinite}
+#questy.anim-think #antennaG{animation:qThink var(--anim-speed) ease-in-out infinite}
+#questy.anim-typing #typingFinger{animation:qTypeTap calc(var(--anim-speed)*.24) steps(2,end) infinite}
+#questy.anim-scan #scanLine{animation:qScanLine var(--anim-speed) ease-in-out infinite}
+#questy.anim-talk .mouth{animation:qMouthTalk calc(var(--anim-speed)*1.6) ease-in-out infinite}
+#questy.anim-talk .talk-waves{animation:qWaveMarks calc(var(--anim-speed)*.8) ease-in-out infinite}
+#questy.anim-laugh .mouth{animation:qLaughMouth calc(var(--anim-speed)*.5) ease-in-out infinite}
+#questy.anim-yawn .mouth{animation:qYawnMouth var(--anim-speed) ease-in-out infinite}
+#questy.anim-yawn .eye-lid{animation:qYawnEyes var(--anim-speed) ease-in-out infinite}
+#questy.anim-blink .eye-lid{animation:qBlinkDouble var(--anim-speed) ease-in-out infinite}
+#questy.anim-startled .eye-lid{animation:qStartledEyes var(--anim-speed) ease-in-out infinite}
+#questy.anim-look .eye-look{animation:qGaze var(--anim-speed) ease-in-out infinite}
+#questy.anim-think .eye-look{animation:qGazeUp calc(var(--anim-speed)*2.4) ease-in-out infinite}
+#questy.anim-typing .eye-look{animation:qGazeDown calc(var(--anim-speed)*2) ease-in-out infinite}
+#questy.anim-scan .eye-look{animation:qGazeScan var(--anim-speed) ease-in-out infinite}
+#questy.anim-listen .eye-look{animation:qGazeListen var(--anim-speed) ease-in-out infinite}
+#questy.anim-peek .eye-look{animation:qGazePeek var(--anim-speed) ease-in-out infinite}
+@keyframes qFloat{50%{transform:translateY(calc(-14px * var(--anim-intensity)))}}
+@keyframes qBounce{0%,100%{transform:translateY(0) scaleY(1)}45%{transform:translateY(calc(-28px * var(--anim-intensity))) scaleY(1.02)}75%{transform:translateY(3px) scaleY(.98)}}
+@keyframes qPulse{50%{transform:scale(calc(1 + .07 * var(--anim-intensity)))}}
+@keyframes qDance{0%,100%{transform:rotate(calc(-5deg * var(--anim-intensity))) translateY(0)}50%{transform:rotate(calc(5deg * var(--anim-intensity))) translateY(-8px)}}
+@keyframes qNod{0%,100%{transform:rotate(0)}50%{transform:rotate(calc(8deg * var(--anim-intensity)))}}
+@keyframes qShake{0%,100%{transform:translateX(0)}25%{transform:translateX(calc(-8px * var(--anim-intensity)))}75%{transform:translateX(calc(8px * var(--anim-intensity)))}}
+@keyframes qSpin{0%,70%{transform:rotate(0)}100%{transform:rotate(calc(360deg * var(--anim-intensity)))}}
+@keyframes qCelebrate{0%,100%{transform:translateY(0) rotate(0)}35%{transform:translateY(calc(-24px * var(--anim-intensity))) rotate(-5deg)}70%{transform:translateY(-5px) rotate(5deg)}}
+@keyframes qLaughBody{0%,100%{transform:translateY(0) rotate(0)}30%{transform:translateY(calc(-12px * var(--anim-intensity))) rotate(calc(-2deg * var(--anim-intensity)))}65%{transform:translateY(calc(2px * var(--anim-intensity))) rotate(calc(2deg * var(--anim-intensity)))}}
+@keyframes qGiggle{0%,100%{transform:translateX(0)}25%{transform:translateX(calc(-4px * var(--anim-intensity))) rotate(-1deg)}75%{transform:translateX(calc(4px * var(--anim-intensity))) rotate(1deg)}}
+@keyframes qBreathe{50%{transform:scale(calc(1 + .025 * var(--anim-intensity)),calc(1 + .045 * var(--anim-intensity))) translateY(calc(-4px * var(--anim-intensity)))}}
+@keyframes qSway{0%,100%{transform:rotate(calc(-3deg * var(--anim-intensity)))}50%{transform:rotate(calc(3deg * var(--anim-intensity)))}}
+@keyframes qPeek{0%,100%{transform:translateX(0)}45%,60%{transform:translateX(calc(48px * var(--anim-intensity))) rotate(3deg)}}
+@keyframes qHop{0%,100%{transform:translateY(0)}45%{transform:translateY(calc(-20px * var(--anim-intensity)))}}
+@keyframes qWiggle{0%,100%{transform:skewX(0)}25%{transform:skewX(-3deg)}75%{transform:skewX(3deg)}}
+@keyframes qListen{0%,100%{transform:rotate(0)}50%{transform:rotate(4deg) translateX(5px)}}
+@keyframes qCheer{0%,100%{transform:translateY(0)}45%{transform:translateY(calc(-30px * var(--anim-intensity))) scale(1.03)}}
+@keyframes qGlow{0%,100%{filter:drop-shadow(0 20px 16px rgba(8,52,124,.14))}50%{filter:drop-shadow(0 0 24px rgba(255,210,67,.9))}}
+@keyframes qHeart{0%,100%{transform:scale(1)}20%{transform:scale(1.06)}40%{transform:scale(1)}60%{transform:scale(1.04)}}
+@keyframes qStartled{0%,70%,100%{transform:translateY(0) scale(1)}75%{transform:translateY(-20px) scale(1.05)}82%{transform:translateY(2px) scale(.98)}}
+@keyframes qAntenna{0%,100%{rotate:0deg}35%{rotate:calc(-10deg * var(--anim-intensity))}70%{rotate:calc(10deg * var(--anim-intensity))}}
+@keyframes qThink{0%,100%{rotate:0deg}30%{rotate:-8deg}65%{rotate:8deg}}
+@keyframes qHandWave{0%,100%{transform:rotate(0deg) translateY(0)}50%{transform:rotate(calc(-24deg * var(--anim-intensity))) translateY(calc(-5px * var(--anim-intensity)))}}
+@keyframes qWaveMarks{0%,100%{opacity:.25;transform:scale(.9)}50%{opacity:1;transform:scale(calc(.9 + .2 * var(--anim-intensity)))}}
+@keyframes qTypeTap{0%,100%{transform:translateY(0)}50%{transform:translateY(calc(12px * var(--anim-intensity)))}}
+@keyframes qScanLine{0%,100%{transform:translateY(calc(-42px * var(--anim-intensity)))}50%{transform:translateY(calc(105px * var(--anim-intensity)))}}
+@keyframes qMouthTalk{0%,100%{transform:scale(1,.35)}9%{transform:scale(.92,1.15)}17%{transform:scale(1.04,.55)}26%{transform:scale(.9,1.3)}34%{transform:scale(1.06,.4)}43%{transform:scale(.95,.95)}50%{transform:scale(1.05,.3)}58%{transform:scale(.9,1.2)}67%{transform:scale(1,.6)}75%{transform:scale(.93,1.1)}84%{transform:scale(1.06,.35)}92%{transform:scale(.97,.8)}}
+@keyframes qLaughMouth{0%,100%{transform:scaleY(.9)}50%{transform:scaleY(calc(1 + .22 * var(--anim-intensity)))}}
+@keyframes qYawnMouth{0%,25%,100%{transform:scaleY(.6)}50%,75%{transform:scaleY(calc(.9 + .45 * var(--anim-intensity))) scaleX(.9)}}
+@keyframes qIdleBlink{0%,90%,100%{transform:scaleY(1)}93%{transform:scaleY(.06)}96%{transform:scaleY(1)}}
+@keyframes qBlinkDouble{0%,28%,100%{transform:scaleY(1)}31%{transform:scaleY(.05)}34%{transform:scaleY(1)}38%{transform:scaleY(.05)}41%,78%{transform:scaleY(1)}81%{transform:scaleY(.05)}84%{transform:scaleY(1)}}
+@keyframes qYawnEyes{0%,20%,100%{transform:scaleY(1)}45%,78%{transform:scaleY(.25)}}
+@keyframes qStartledEyes{0%,70%,100%{transform:scale(1)}75%{transform:scale(1.2)}84%{transform:scale(1.1)}}
+@keyframes qGaze{0%,14%,100%{transform:translate(0,0)}18%,38%{transform:translate(calc(-9px * var(--anim-intensity)),-1px)}42%,56%{transform:translate(0,0)}60%,80%{transform:translate(calc(9px * var(--anim-intensity)),-2px)}84%,92%{transform:translate(calc(3px * var(--anim-intensity)),calc(5px * var(--anim-intensity)))}}
+@keyframes qGazeUp{0%,10%,100%{transform:translate(0,0)}18%,62%{transform:translate(calc(6px * var(--anim-intensity)),calc(-8px * var(--anim-intensity)))}70%,88%{transform:translate(calc(-5px * var(--anim-intensity)),calc(-7px * var(--anim-intensity)))}}
+@keyframes qGazeDown{0%,100%{transform:translate(calc(-4px * var(--anim-intensity)),calc(8px * var(--anim-intensity)))}50%{transform:translate(calc(4px * var(--anim-intensity)),calc(8px * var(--anim-intensity)))}}
+@keyframes qGazeScan{0%,100%{transform:translateY(calc(-7px * var(--anim-intensity)))}50%{transform:translateY(calc(8px * var(--anim-intensity)))}}
+@keyframes qGazeListen{0%,100%{transform:translate(calc(6px * var(--anim-intensity)),0)}50%{transform:translate(calc(9px * var(--anim-intensity)),calc(2px * var(--anim-intensity)))}}
+@keyframes qGazePeek{0%,30%,75%,100%{transform:translateX(0)}42%,62%{transform:translateX(calc(-9px * var(--anim-intensity)))}}
+</style></defs>
+<g id="antennaG"><path id="antennaStem" fill="none" stroke-linecap="round" d="M300 120V70" stroke="#07377e" stroke-width="14"/><circle id="antennaBulb" cx="300" cy="50.56" r="27" fill="#ffd243" stroke="#07377e" stroke-width="10.08"/><g id="rays" fill="none" stroke-linecap="round" stroke="#ffd243" stroke-width="8.4"><path id="ray1" d="M300 31v-13"/><path id="ray2" d="M277.05 55.15l-12-12"/><path id="ray3" d="M322.95 55.15l12-12"/></g></g>
+<g id="bodyG"><rect id="leftEar" x="79.7" y="251.8" width="46" height="104" rx="23" fill="#07377e"/><rect id="rightEar" x="474.3" y="251.8" width="46" height="104" rx="23" fill="#07377e"/><rect id="bodyShape" fill="url(#bodyGrad)" x="105" y="115" width="390" height="360" rx="145" stroke="#07377e" stroke-width="14"/><path id="bodyShine" fill="none" stroke="rgba(255,255,255,.36)" stroke-linecap="round" d="M147 201q97.5-64.8 191.1-43.199999999999996" stroke-width="8.68"/></g>
+<rect id="faceShape" x="162" y="202" width="276" height="227" rx="102" fill="#ffffff"/>
+<g id="bowG" stroke-linejoin="round" transform="translate(385.8 150) rotate(0) scale(1)" stroke="#07377e" stroke-width="10.92"><path id="bowL" fill="url(#bowGrad)" d="M0 20L-48-20Q-72 10-65 76L2 48Z"/><path id="bowR" fill="url(#bowGrad)" d="M34 37L104 15Q106 72 72 102L25 55Z"/><circle id="bowC" cx="17" cy="45" r="25" fill="#ff67ac"/></g>
+<g id="lashesG" fill="none" stroke-linecap="round"><path id="lashL1" d="M236.56 242L220.06 227.7" stroke="#07377e" stroke-width="8.82"/><path id="lashL2" d="M251.56 237L248.56 220" stroke="#07377e" stroke-width="8.82"/><path id="lashR1" d="M363.44 242L379.94 227.7" stroke="#07377e" stroke-width="8.82"/><path id="lashR2" d="M348.44 237L351.44 220" stroke="#07377e" stroke-width="8.82"/></g>
+<g id="expressionG"><g class="eye" transform="rotate(0 248 296)"><g class="eye-lid"><g class="eye-look"><ellipse class="eye-ball" cx="248" cy="296" rx="31" ry="43" fill="#07377e"/><circle cx="258" cy="281" r="13" fill="#fff"/><circle cx="238" cy="309" r="6" fill="#fff"/></g></g></g><g class="eye" transform="rotate(0 352 296)"><g class="eye-lid"><g class="eye-look"><ellipse class="eye-ball" cx="352" cy="296" rx="31" ry="43" fill="#07377e"/><circle cx="362" cy="281" r="13" fill="#fff"/><circle cx="342" cy="309" r="6" fill="#fff"/></g></g></g><ellipse class="mouth" cx="300" cy="360" rx="21.080000000000002" ry="16.12" fill="#f65398" stroke="#07377e" stroke-width="8.96"/><path d="M446 346q20 10 0 20m12-32q32 22 0 44" class="talk-waves" fill="none" stroke="#07377e" stroke-width="4.928000000000001"/></g><g id="cheeksG"><ellipse id="cheekL" cx="200.64" cy="352" rx="27" ry="15" fill="#ffadd0"/><ellipse id="cheekR" cx="399.36" cy="352" rx="27" ry="15" fill="#ffadd0"/></g>
+<g id="armG" stroke-linejoin="round" transform="translate(475 374.2) rotate(-14) scale(1)" stroke="#07377e" stroke-width="14"><ellipse id="hand" cx="0" cy="0" rx="27" ry="42" fill="#9bdcf2"/><g id="waveG" fill="none" stroke-linecap="round" stroke="#62c9e8" stroke-width="8.12"><path id="wave1" d="M31 -20q22-20 33 2"/><path id="wave2" d="M27 -44q28-20 39 6"/></g></g><g id="typingProp" style="display:none" pointer-events="none"><rect x="202" y="427" width="196" height="48" rx="12" fill="#dfeaf6" stroke="#07377e" stroke-width="8"/><g fill="#9eb5d0"><rect x="220" y="441" width="22" height="11" rx="3"/><rect x="248" y="441" width="22" height="11" rx="3"/><rect x="276" y="441" width="22" height="11" rx="3"/><rect x="304" y="441" width="22" height="11" rx="3"/><rect x="332" y="441" width="22" height="11" rx="3"/><rect x="360" y="441" width="20" height="11" rx="3"/><rect x="250" y="458" width="102" height="8" rx="3"/></g><circle id="typingFinger" cx="352" cy="425" r="13" fill="#9bdcf2" stroke="#07377e" stroke-width="7"/></g><g id="scanProp" style="display:none" pointer-events="none"><rect x="171" y="214" width="258" height="205" rx="88" fill="none" stroke="#5ff0dd" stroke-width="5" opacity=".7"/><line id="scanLine" x1="190" y1="260" x2="410" y2="260" stroke="#2adbc5" stroke-width="8" stroke-linecap="round" opacity=".9"/></g><g id="listenProp" style="display:none" pointer-events="none"><path d="M486 265q25-26 38 0q-8 18-23 32" fill="none" stroke="#07377e" stroke-width="10" stroke-linecap="round"/><path d="M500 248q21-18 36 1" fill="none" stroke="#62c9e8" stroke-width="7" stroke-linecap="round"/></g>
+</svg>

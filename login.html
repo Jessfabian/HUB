@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Sign in</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="login">
+<div class="wf-review"><strong>WIREFRAME REVIEW</strong><span>Sign-in page (shown before the app)</span><span class="spacer"></span><a href="home.html">Skip to Home</a> · <a href="index.html">All screens</a></div>
+<div class="signin">
+  <section class="brandside">
+    <span class="mm"><img src="icons/mmsd-logo.svg" style="width: 400px;" /></span>
+    <h1>Case Manager Workstation</h1>
+
+    <div class="row" style="align-items:center;gap:14px"><img src="icons/questy-searching-custom.svg" alt="Questy" /><p style="margin:0">"Welcome back! Your cases are right where you left them." <br><small style="color:#bcd0ea">– Questy</small></p></div>
+  </section>
+
+  <section class="formside">
+    <div class="card">
+      <div class="tabsw seg" role="tablist">
+        <button type="button" data-p="signin" aria-pressed="true">Sign in</button>
+        <button type="button" data-p="setup" aria-pressed="false">First time</button>
+        <button type="button" data-p="forgot" aria-pressed="false">Forgot password</button>
+        <button type="button" data-p="password" aria-pressed="false">Change password</button>
+      </div>
+
+      <form data-panel="signin">
+        <h2>Sign in <span class="note">1</span></h2>
+        <label class="field">Work email<span class="in">first.last@massmutual.com</span></label>
+        <label class="field">Password<span class="in">••••••••••••</span></label>
+        <label class="row" style="gap:6px;margin:6px 0 14px"><input type="checkbox" checked /> Keep me signed in on this computer (8 hours)</label>
+        <a class="btn pri" href="home.html" style="display:block;text-align:center">Sign in</a>
+        <p class="muted fine" style="margin-top:12px">5 wrong tries locks the account for 15 minutes. Ask your manager to unlock it sooner. <span class="note">3</span></p>
+      </form>
+
+      <form data-panel="setup" hidden>
+        <h2>Set up your account <span class="note">2</span></h2>
+        <p class="muted">Opened from the invite link your manager sent. The link works once and expires in 72 hours.</p>
+        <label class="field">Name (from roster)<span class="in">Burke Jr, Tony · CM Team 2</span></label>
+        <label class="field">Work email<span class="in">johnburke@massmutual.com (locked)</span></label>
+        <label class="field">Create password<span class="in">••••••••••••</span></label>
+        <label class="field">Confirm password<span class="in">••••••••••••</span></label>
+        <p class="muted fine">At least 12 characters. Not your Windows password (recommended).</p>
+        <a class="btn pri" href="cm-profile.html" style="display:block;text-align:center">Create account → finish profile</a>
+      </form>
+
+      <form data-panel="forgot" hidden>
+        <h2>Reset password</h2>
+        <label class="field">Work email<span class="in">first.last@massmutual.com</span></label>
+        <span class="btn pri" style="display:block;text-align:center">Email me a reset link</span>
+        <p class="muted fine" style="margin-top:12px">The link goes only to your @massmutual.com address and expires in 30 minutes. If email isn't set up yet, your manager can reset it from <a href="admin-users.html">User accounts</a>.</p>
+      </form>
+
+      <form data-panel="password" hidden>
+        <h2>Change password</h2>
+        <label class="field">Current password<span class="in">••••••••</span></label>
+        <label class="field">New password<span class="in">••••••••••••</span></label>
+        <label class="field">Confirm new password<span class="in">••••••••••••</span></label>
+        <a class="btn pri" href="home.html" style="display:block;text-align:center">Save</a>
+      </form>
+    </div>
+  </section>
+
+  <section class="notes">
+    <h2>Design notes · Sign-in (no SSO needed)</h2>
+    <ol>
+      <li><b>Our own login</b> runs inside the Flask app on the private server: work email + password. Passwords are stored only as a salted hash (never readable), sessions use secure cookies, and the site requires HTTPS. If SSO ever comes, accounts are keyed by email, so we can switch over without losing any cases, settings, or timer history.</li>
+      <li><b>No self sign-up.</b> A manager or admin invites people from the roster (<a href="admin-users.html">User accounts</a>). Each person gets a one-time link, sets a password, then lands on Profile &amp; settings. Their role (CM, AM, manager, admin) comes from the invite. The "Working as" picker goes away; the app knows who you are.</li>
+      <li>Safety: lockout after 5 failed tries, auto sign-out after 30 minutes idle (with a 2-minute warning, and your case is autosaved), "keep me signed in" up to 8 hours, and every sign-in logged.</li>
+      <li>Optional, to ask IT: the server can also use <b>Windows sign-in</b> (IIS / Kerberos), so people on the MassMutual network are signed in automatically with no password. This is not a full SSO project. Our login page stays as the fallback.</li>
+    </ol>
+  </section>
+</div>
+<script>
+  // Wireframe only: switch between the sign-in panels (#password opens "Change password").
+  const show = (p) => {
+    document.querySelectorAll("[data-panel]").forEach((f) => { f.hidden = f.dataset.panel !== p; });
+    document.querySelectorAll("[data-p]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.p === p)));
+  };
+  document.querySelector(".tabsw").addEventListener("click", (e) => { const b = e.target.closest("[data-p]"); if (b) show(b.dataset.p); });
+  if (location.hash) show(location.hash.slice(1));
+</script>
+</body>
+</html>

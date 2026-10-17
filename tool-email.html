@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Email builder</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="email">
+<main>
+  <div class="pagehead">
+    <div><p class="muted"><a href="tools-hub.html">Tools</a> › Email builder · <em>Today: emailBuilder</em></p><h1>Email builder <span class="note">1</span></h1></div>
+    <div class="row"><span class="btn sm">Reset</span><a class="btn sm" href="workstation-merge.html">Open in workstation</a></div>
+  </div>
+  <div class="tool-layout">
+    <section class="box">
+      <h3>Inputs <span class="note">2</span></h3>
+      <div class="grid g2"><label class="field">Stage<span class="in">IR / Interim / Issue / Delivery ▾</span></label><label class="field">Template<span class="in">Outstanding reqs / Issue / Ext. of delivery ▾</span></label><label class="field">Policy number(s)<span class="in">companions: list all</span></label><label class="field">Firm / agency #<span class="in">12345 ▾</span></label><label class="field">To <span class="src">firm contacts</span><span class="in">producer; firm NB contact ✎</span></label><label class="field">CC <span class="src">account manager for firm #</span><span class="in">AM name ✎</span></label><label class="field">Send from<span class="in">Current CM / Shared inbox ▾</span></label><div class="ph" style="grid-column:1/-1">📎 Attachments (from requirements): F6734 Trust Cert (state version) ✕ · F7010 ✕ · [+ add form]</div><div class="ph" style="grid-column:1/-1">Pull in: requirements ☐ amendments ☐ Save Age ☐ (from case output)</div></div>
+    </section>
+    <section class="box">
+      <h3>Output <span class="note">3</span></h3>
+      <div class="out">Subject: …<br/>Hello …,<br/>…</div>
+      <div class="row" style="margin-top:10px"><button class="btn sm pri" data-compose="ir">✉ Send email</button><span class="btn sm">Open in Outlook</span><span class="btn sm">Copy email + download forms</span><span class="btn sm">Send to case output</span></div>
+    </section>
+  </div>
+  <section class="notes">
+    <h2>Design notes · Email builder</h2>
+    <ol><li>Templates are grouped by stage. The firm/agency number drives recipients and wording (e.g. EDJ NB contact only).</li><li>Recipients come from a simple firm contact list that CMs can edit. The account manager is linked to the firm/agency number (still to be decided; it can be typed in for now). Required forms attach automatically from the requirements and can be removed or added.</li><li><b>Open draft in Outlook</b> downloads a ready-to-send email file with To/CC, subject, body, and the PDFs attached. In classic Outlook it opens as an editable draft; you review it, then click Send. For the new Outlook, where this may open read-only, <b>Copy email + download forms</b> copies the body and downloads the PDFs so you can paste and attach. The server keeps copies of the common forms so attaching is fast and works offline.</li></ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Illustration validator</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="illus">
+<main>
+  <div class="pagehead">
+    <div><p class="muted"><a href="tools-hub.html">Tools</a> › Illustration validator · <em>Today: Illustration Validation app</em></p><h1>Illustration validator <span class="note">1</span></h1></div>
+    <div class="row"><span class="btn sm">Reset</span><a class="btn sm" href="workstation-merge.html">Open in workstation</a></div>
+  </div>
+  <div class="tool-layout">
+    <section class="box">
+      <h3>Inputs <span class="note">2</span></h3>
+      <div class="grid g2"><div class="ph" style="grid-column:1/-1">Drop illustration PDF here (or browse)</div><label class="field">Compare against<span class="in">Part 1 values (manual entry) ▾</span></label><label class="field">Product<span class="in">▾</span></label></div>
+    </section>
+    <section class="box">
+      <h3>Output <span class="note">3</span></h3>
+      <div class="out">✔ Face amount matches<br/>✖ Premium mode differs → amend<br/>⚠ Loan carryover not shown</div>
+      <div class="row" style="margin-top:10px"><span class="btn sm pri">Copy</span><span class="btn sm">Send to case output</span><span class="btn sm">Clear</span></div>
+    </section>
+  </div>
+  <section class="notes">
+    <h2>Design notes · Illustration validator</h2>
+    <ol><li>Keeps today's Flask-backed validator; only the page frame changes.</li><li>Mismatches offer a one-click 'Create amendment'.</li><li>In the workstation this opens as a panel inside the illustration step.</li></ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

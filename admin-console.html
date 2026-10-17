@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Admin console</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="admin">
+<main>
+  <div class="box admin-banner"><b>🔒 Admins only.</b> Sign in as an admin (e.g. Fabian, Jessie in the name menu → Demo: sign in as) to see this page.</div>
+  <div class="admin-only">
+  <div class="pagehead">
+    <div><p class="muted">MANAGEMENT · run the site and change it without touching code</p><h1>Admin console <span class="note">1</span></h1></div>
+    <div class="row"><span class="pill dark">Signed in: <span data-me-name>Fabian, Jessie</span> · Admin · Dev</span></div>
+  </div>
+
+  <div class="grid g4">
+    <section class="box kpi"><span class="muted">Site</span><b>🟢 Running</b><small class="muted">v1.0.3 · up 6 days</small></section>
+    <section class="box kpi"><span class="muted">Signed in now</span><b>18</b><small class="muted">of 40 active users</small></section>
+    <section class="box kpi"><span class="muted">Errors (24 h)</span><b>2</b><small class="muted"><a>view log</a></small></section>
+    <section class="box kpi"><span class="muted">Last backup</span><b>2:00 AM</b><small class="muted">nightly · 30 kept</small></section>
+  </div>
+
+  <div class="grid g2">
+    <section class="box">
+      <h3>Run the site <span class="note">2</span></h3>
+      <div class="row"><span class="btn sm">↻ Restart app</span><span class="btn sm">🚧 Maintenance mode (banner + read-only)</span><span class="btn sm">📣 Post site banner</span></div>
+      <table class="wf" style="margin-top:10px">
+        <tr><th>Version</th><th>Deployed</th><th>By</th><th></th></tr>
+        <tr><td><b>v1.0.3</b> (live)</td><td>10/14 6:05 PM</td><td>Fabian, Jessie</td><td>—</td></tr>
+        <tr><td>v1.0.2</td><td>10/09</td><td>Fabian, Jessie</td><td><span class="btn sm">Roll back to this</span></td></tr>
+      </table>
+      <div class="ph drop" style="margin-top:8px">Deploy a new version: drop the release package, or <b>Pull latest from the repo</b> → preview changes → tests run → Deploy</div>
+    </section>
+
+    <section class="box">
+      <h3>Features on / off <span class="note">3</span></h3>
+      <label class="opt row" style="justify-content:space-between">Ask Questy chatbot <input type="checkbox" checked /></label>
+      <label class="opt row" style="justify-content:space-between">Send email from the workstation <input type="checkbox" checked /></label>
+      <label class="opt row" style="justify-content:space-between">Drop-in document pre-fill <input type="checkbox" checked /></label>
+      <label class="opt row" style="justify-content:space-between">Case timer <input type="checkbox" checked /></label>
+      <label class="opt row" style="justify-content:space-between">Celebrations, streaks &amp; kudos <input type="checkbox" checked /></label>
+      <label class="opt row" style="justify-content:space-between">Pilot only (Team 2) for new features <input type="checkbox" /></label>
+    </section>
+  </div>
+
+  <section class="box">
+    <h3>Edit content (no code) <span class="note">4</span></h3>
+    <table class="wf">
+      <tr><th>Content</th><th>What it controls</th><th>Last change</th><th></th></tr>
+      <tr><td>Checklist steps &amp; rules</td><td>Steps, "why" text, show/hide rules, Quest links per stage</td><td>10/14 · Fabian, Jessie</td><td><span class="btn sm">Edit</span> <span class="btn sm">History</span></td></tr>
+      <tr><td>Email templates</td><td>Composer templates, subjects, signatures</td><td>10/12 · Al-Kowami, Tabarek</td><td><span class="btn sm">Edit</span> <span class="btn sm">History</span></td></tr>
+      <tr><td>Requirement → form map</td><td>Which PDF (and state version) attaches for each requirement</td><td>10/10</td><td><span class="btn sm">Edit</span> <span class="btn sm">Upload forms</span></td></tr>
+      <tr><td>Questy answers</td><td>Chatbot answers + Quest links; see questions it couldn't answer</td><td>10/15</td><td><span class="btn sm">Edit</span> <span class="btn sm">Unanswered (12)</span></td></tr>
+      <tr><td>Watch-outs &amp; tip of the day</td><td>Right-rail warnings, home tips, kudos wording</td><td>10/08</td><td><span class="btn sm">Edit</span></td></tr>
+      <tr><td>Roster, firm directory, users</td><td>People, AM ↔ firm, DocuSign flag, accounts</td><td>10/17</td><td><a href="admin-users.html">Users</a> · <a href="ref-firm-directory.html">Firms</a></td></tr>
+    </table>
+    <p class="muted">Every edit is saved as a new version with who and when, so you can preview it before publishing and undo it in one click.</p>
+  </section>
+
+  <section class="box dev-only">
+    <h3>🛠 Developer tools <span class="pill">Dev access</span> <span class="note">5</span></h3>
+    <div class="grid g3">
+      <div><h4>Logs</h4><a>App / error log</a><br/><a>Sign-in log</a><br/><a>Email send log</a><br/><a>Audit log (admin changes)</a></div>
+      <div><h4>Data</h4><a>Back up now</a><br/><a>Download backup</a><br/><a>Restore (test copy first)</a><br/><a>Data retention: closed cases 2 years ▾</a></div>
+      <div><h4>System</h4><a>Run test suite</a><br/><a>API explorer</a><br/><a>Settings: mail sending (Graph / relay), HTTPS cert, session timeout</a><br/><a>Health check: /api/health</a></div>
+    </div>
+  </section>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes · Admin console</h2>
+    <ol>
+      <li>Only <b>Admin</b> accounts see this page; the server blocks everyone else. Your account (<b>Fabian, Jessie · Account Manager MMSD</b>) has <b>Manager + Admin + Dev</b> access, so you also see Team insights, User accounts, and the Developer tools.</li>
+      <li>Run the site from the browser: restart, maintenance mode, a site-wide banner ("Quest is down until 2 PM"), deploy a new version, and roll back. Risky actions ask for your password again and are logged.</li>
+      <li>Feature switches let you turn a feature off quickly if it misbehaves, or pilot it with one team first.</li>
+      <li>Most day-to-day changes (steps, templates, forms, chatbot answers) are content, not code, so they are edited here, previewed, and published without a redeploy.</li>
+      <li>Dev-only: logs, backups/restore, tests, API explorer, and server settings. Code changes still go through the repo (<code>python app.py</code> runs it locally on port 5001), then deploy here.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

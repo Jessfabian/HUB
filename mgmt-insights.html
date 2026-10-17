@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · Team insights</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="mgmt">
+<main>
+  <div class="box cm-banner">
+    <b>Managers only.</b> CMs who open this link see "You don't have access." Use <b>View as: Manager</b> in the review toolbar to preview the page. <span class="note">1</span>
+  </div>
+
+  <div class="mgr-only">
+  <div class="pagehead">
+    <div><p class="muted">MANAGEMENT · case timer analytics</p><h1>Team insights <span class="note">2</span></h1></div>
+    <div class="row"><span class="btn sm">Export CSV</span><span class="btn sm">Schedule weekly email</span></div>
+  </div>
+
+  <div class="box">
+    <div class="grid g5" style="grid-template-columns:repeat(5,1fr)">
+      <label class="field">Team<span class="in">All / Team 1 / Team 2 / India GCC ▾</span></label>
+      <label class="field">Case manager<span class="in">All ▾</span></label>
+      <label class="field">Case type / skill<span class="in">All ▾</span></label>
+      <label class="field">Tenure<span class="in">All / New hire (&lt; 90 days) ▾</span></label>
+      <label class="field">Date range<span class="in">Last 12 weeks ▾</span></label>
+    </div>
+  </div>
+
+  <div class="grid g4">
+    <div class="box kpi"><img class="ico" src="icons/timer.png" alt="" /><b>41 min</b><span class="muted">Avg IR time <span class="trend-good">▼ 5</span></span></div>
+    <div class="box kpi"><img class="ico" src="icons/hourglass.png" alt="" /><b>34 min</b><span class="muted">Median IR time</span></div>
+    <div class="box kpi"><img class="ico" src="icons/validated.png" alt="" /><b>1,284</b><span class="muted">IRs timed</span></div>
+    <div class="box kpi"><img class="ico" src="icons/workstation.png" alt="" /><b>82%</b><span class="muted">IRs worked in the workstation (adoption)</span></div>
+  </div>
+
+  <div class="grid" style="grid-template-columns: 3fr 2fr;">
+    <section class="box">
+      <header><h3>Avg IR minutes per week <span class="note">3</span></h3><span class="muted"><b style="color:var(--navy)">━</b> experienced · <b style="color:var(--sky)">━</b> new hires (&lt; 90 days)</span></header>
+      <div class="chart">
+        <svg viewBox="0 0 120 100" preserveAspectRatio="none">
+          <polyline fill="none" stroke="#002F6C" stroke-width="1.5" points="0,60 10,58 20,61 30,57 40,56 50,58 60,55 70,54 80,55 90,53 100,52 110,51 120,50" />
+          <polyline fill="none" stroke="#4EC8EB" stroke-width="1.5" points="0,10 10,16 20,20 30,27 40,31 50,36 60,40 70,42 80,45 90,47 100,48 110,49 120,49" />
+        </svg>
+      </div>
+      <p class="muted">New hires reach the team average in about 10 weeks.</p>
+    </section>
+
+    <section class="box">
+      <h3>Avg IR time by CM <span class="note">4</span></h3>
+      <div class="hbar"><span>CM A (new hire)</span><div class="bar"><i style="width:88%"></i></div><span>66 min</span></div>
+      <div class="hbar"><span>CM B</span><div class="bar"><i style="width:62%"></i></div><span>46 min</span></div>
+      <div class="hbar"><span>CM C</span><div class="bar"><i style="width:55%"></i></div><span>41 min</span></div>
+      <div class="hbar"><span>CM D</span><div class="bar"><i style="width:48%"></i></div><span>36 min</span></div>
+      <div class="hbar"><span>CM E</span><div class="bar"><i style="width:40%"></i></div><span>30 min</span></div>
+      <p class="muted">Sorted by name by default. Click a CM to see their trend by case type.</p>
+    </section>
+  </div>
+
+  <section class="box">
+    <header><h3>Newly trained skills <span class="note">5</span></h3><span class="muted">time per IR since the "trained since" date in the profile</span></header>
+    <table class="wf">
+      <tr><th>CM</th><th>Skill</th><th>Trained since</th><th>IRs since</th><th>First 5 avg</th><th>Last 5 avg</th><th>Team avg</th><th>Trend</th></tr>
+      <tr><td>CM A</td><td>Trust-owned</td><td>09/02/2026</td><td>14</td><td>72 min</td><td>51 min</td><td>45 min</td><td class="trend-good">▼ 21</td></tr>
+      <tr><td>CM D</td><td>1035 with loan</td><td>08/12/2026</td><td>9</td><td>80 min</td><td>58 min</td><td>52 min</td><td class="trend-good">▼ 22</td></tr>
+      <tr><td>CM B</td><td>VUL (MMLIS)</td><td>10/01/2026</td><td>3</td><td>64 min</td><td>—</td><td>48 min</td><td class="muted">not enough data</td></tr>
+    </table>
+  </section>
+
+  <div class="grid g2">
+    <section class="box">
+      <h3>Where the time goes (by stage) <span class="note">6</span></h3>
+      <div class="hbar"><span>Profile + documents</span><div class="bar"><i style="width:30%"></i></div><span>9 min</span></div>
+      <div class="hbar"><span>Replacement / 1035</span><div class="bar"><i style="width:45%"></i></div><span>14 min</span></div>
+      <div class="hbar"><span>Ownership / trust</span><div class="bar"><i style="width:35%"></i></div><span>11 min</span></div>
+      <div class="hbar"><span>Requirements + email</span><div class="bar"><i style="width:22%"></i></div><span>7 min</span></div>
+      <p class="muted">Paused time (the top reasons: waiting on field, Quest lookup, meeting) is shown separately and not counted.</p>
+    </section>
+
+    <section class="box">
+      <h3>How the timer collects data <span class="note">7</span></h3>
+      <div class="check">Starts automatically when a case is opened in the workstation (can be turned off per CM)</div>
+      <div class="check">Records time per checklist stage; pauses with a reason</div>
+      <div class="check">Auto-pauses after 10 min with no activity, and asks "were you still working?"</div>
+      <div class="check">CM can correct a time with a reason (correction is logged)</div>
+      <div class="check">Stops on "Mark IR complete"</div>
+      <div class="check">Morale: kudos sent and received (counts only)</div>
+    </section>
+  </div>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes · Team insights (management)</h2>
+    <ol>
+      <li>Shown only to people marked as managers in the roster (for example, the CM directors). Hidden in the sidebar for everyone else. After SSO, access comes from the AD group.</li>
+      <li>Built for the management request: how long initial reviews take over time, especially for new employees and people newly trained on a skill.</li>
+      <li>Weekly trend with new hires (&lt; 90 days, from the profile start date) compared with experienced CMs.</li>
+      <li>Per-CM view is for coaching. It is never shown to other CMs, and it is not a ranking. Default sort is by name.</li>
+      <li>Uses the "trained since" date from each CM's profile training matrix, so managers can see the learning curve per skill.</li>
+      <li>Stage times show which steps slow people down. This helps decide where to add guidance or training.</li>
+      <li>Timer data is saved on the server with the case (case label, CM, stage, start/stop, pauses). No client data is stored in the timer records.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

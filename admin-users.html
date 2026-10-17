@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · User accounts</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="users">
+<main>
+  <div class="cm-banner box"><b>🔒 Managers and admins only.</b> Switch "View as: Manager" in the review bar to see this page.</div>
+  <div class="mgr-only">
+  <div class="pagehead">
+    <div><p class="muted">MANAGEMENT · who can sign in, and what they can see</p><h1>User accounts <span class="note">1</span></h1></div>
+    <div class="row"><span class="btn sm pri">+ Invite from roster</span><span class="btn sm">Invite all not yet invited (23)</span><span class="btn sm">Sign-in log</span></div>
+  </div>
+
+  <div class="grid g4">
+    <section class="box kpi"><span class="muted">Active</span><b>34</b></section>
+    <section class="box kpi"><span class="muted">Invited, not set up</span><b>6</b></section>
+    <section class="box kpi"><span class="muted">Locked</span><b>1</b></section>
+    <section class="box kpi"><span class="muted">On roster, not invited</span><b>23</b></section>
+  </div>
+
+  <section class="box">
+    <div class="grid g4">
+      <label class="field">Search<span class="in">name or email</span></label>
+      <label class="field">Team<span class="in">All ▾</span></label>
+      <label class="field">Role<span class="in">All ▾</span></label>
+      <label class="field">Status<span class="in">All ▾</span></label>
+    </div>
+  </section>
+
+  <section class="box">
+    <header><h3>Accounts <span class="note">2</span></h3></header>
+    <table class="wf">
+      <tr><th>Name</th><th>Email</th><th>Team</th><th>Role</th><th>Status</th><th>Last sign-in</th><th></th></tr>
+      <tr><td>Burke Jr, Tony</td><td>johnburke@massmutual.com</td><td>CM Team 2</td><td>CM ▾</td><td><span class="pill dark">Active</span></td><td>Today 8:02 AM</td><td><span class="btn sm">Reset password</span> <span class="btn sm">Disable</span></td></tr>
+      <tr><td>Davis, Tiffany</td><td>TiffanyDavis@MassMutual.com</td><td>CM Team 2</td><td>CM ▾</td><td><span class="pill">Invited · 2 days</span></td><td>—</td><td><span class="btn sm">Resend invite</span> <span class="btn sm">Copy link</span></td></tr>
+      <tr><td>Johnson, Kayla</td><td>KJohnson@MassMutual.com</td><td>CM Team 1</td><td>CM ▾</td><td><span class="pill">🔒 Locked</span></td><td>Yesterday</td><td><span class="btn sm pri">Unlock</span> <span class="btn sm">Reset password</span></td></tr>
+      <tr><td>Al-Kowami, Tabarek</td><td>TAlKowami39@massmutual.com</td><td>CM Team 2</td><td>Manager ▾</td><td><span class="pill dark">Active</span></td><td>Today 7:40 AM</td><td><span class="btn sm">Reset password</span></td></tr>
+      <tr><td>Baskerville, Catia</td><td>cbaskerville63@massmutual.com</td><td>MMSD AMs</td><td>AM ▾</td><td><span class="pill">Not invited</span></td><td>—</td><td><span class="btn sm pri">Invite</span></td></tr>
+      <tr><td>Racicot, Laurie</td><td><em class="muted">no email on roster</em></td><td>CM Team 1</td><td>Manager ▾</td><td><span class="pill">Needs email</span></td><td>—</td><td><span class="btn sm">Add email</span></td></tr>
+    </table>
+  </section>
+
+  <div class="grid g2">
+    <section class="box">
+      <h3>Roles <span class="note">3</span></h3>
+      <table class="wf">
+        <tr><th>Role</th><th>Can</th></tr>
+        <tr><td>CM</td><td>Workstation, own + team cases, all tools, own timer stats, edit firm contacts</td></tr>
+        <tr><td>AM</td><td>Tools (Reissue, Email, Verbiage), view cases they're CC'd on, firm directory</td></tr>
+        <tr><td>Manager / AM lead</td><td>All of the above + Team insights, edit firm directory, invite / unlock users, edit email templates</td></tr>
+        <tr><td>Admin</td><td>Everything + roster import, retention settings, sign-in log</td></tr>
+      </table>
+    </section>
+    <section class="box">
+      <h3>Roster sync <span class="note">4</span></h3>
+      <div class="ph drop">Drop an updated roster / distribution-list export to add new hires and flag people who left</div>
+      <p class="muted">Last sync: 10/17 · 104 people · 2 left the roster → accounts disabled (cases reassigned to their manager)</p>
+    </section>
+  </div>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes · User accounts</h2>
+    <ol>
+      <li>Replaces the "Working as" picker. Managers and admins invite people from the private roster; nobody can create their own account.</li>
+      <li>Status flow: Not invited → Invited (one-time link, 72 h) → Active. Lockouts and disabled accounts are shown clearly with a one-click fix. Passwords are never visible to anyone, including admins.</li>
+      <li>Roles control which pages show in the sidebar and what each person can edit. The server enforces them (not only hidden in the page).</li>
+      <li>When someone leaves the roster their account is disabled automatically, and their open cases go to their manager to reassign.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

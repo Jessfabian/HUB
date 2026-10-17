@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · My cases</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="queue">
+<main>
+  <div class="pagehead"><div><p class="muted">WORK · today: mycases/cases.html</p><h1>My cases <span class="note">1</span></h1></div></div>
+  <div class="box" style="margin-bottom:12px">✔ Cases are saved on the CM server and shared with the whole CM team (view + edit). <span class="note">2</span></div>
+  <div class="row" style="margin-bottom:10px"><span class="seg"><span class="btn sm pri">Mine</span><span class="btn sm">Team</span><span class="btn sm">Unassigned</span></span><span class="pill dark">Active (4)</span><span class="pill">Awaiting reqs</span><span class="pill">Ready to issue</span><span class="pill">Delivered</span><span style="flex:1"></span><span class="btn sm pri">+ New case</span></div>
+  <table class="wf">
+    <tr><th>Insured / policy #</th><th>Owner (CM)</th><th>Profile</th><th>Stage</th><th>Status</th><th>Next action</th><th>Updated</th><th></th></tr>
+    <tr><td><b>Tyrion Lannister</b><br/><small class="muted">77 000 001 · 🔗 2</small></td><td data-me-name>CM name</td><td><span class="pill">WL</span><span class="pill">Trust</span><span class="pill">1035+loan</span></td><td>IR</td><td><span class="st wait">● Working · 38%</span></td><td>Trust certificate</td><td>today</td><td><a class="btn sm pri" href="workstation-merge.html?view=0">Resume</a> <a class="btn sm" href="workstation-merge.html?view=1">View</a></td></tr>
+    <tr><td><b>Jaime Lannister</b><br/><small class="muted">77 000 209</small></td><td data-me-name>CM name</td><td><span class="pill">WL100</span><span class="pill">eSigned</span><span class="pill">BOT</span><span class="pill">TX</span></td><td>IR</td><td><span class="st wait">● Working · 2/6</span></td><td>Act on BOT note</td><td>today</td><td><a class="btn sm pri" href="workstation-case-lannister.html?view=0">Resume</a> <a class="btn sm" href="workstation-case-lannister.html?view=1">View</a></td></tr>
+    <tr><td><b>Arya Stark</b><br/><small class="muted">77 000 410</small></td><td>Brienne of Tarth</td><td><span class="pill">VUL</span><span class="pill">NY</span></td><td>Issue</td><td><span class="st ok">✔ Ready to issue</span></td><td>Issue in WinRisk</td><td>10/21</td><td><a class="btn sm pri" href="workstation-case-arya.html?view=1">View</a></td></tr>
+    <tr class="qrow-idle"><td><b>Sansa Stark</b><br/><small class="muted">77 000 003 · 🔗 1</small></td><td>Brienne of Tarth</td><td><span class="pill">WL</span></td><td>Interim</td><td><span class="st idle">◌ Waiting on field · 6 days</span></td><td>AM follow-up due today</td><td>10/16</td><td><a class="btn sm" href="workstation-case-arya.html?view=1">View</a></td></tr>
+    <tr class="qrow-idle"><td><b>Samwell Tarly</b><br/><small class="muted">77 000 117</small></td><td>Podrick Payne</td><td><span class="pill">UL Guard</span></td><td>Delivery</td><td><span class="st idle">◌ Out for delivery</span></td><td>Ext. of delivery?</td><td>2 days</td><td><a class="btn sm" href="workstation-case-arya.html?view=1">View</a></td></tr>
+  </table>
+  <p class="muted">Reassign / bulk-reassign · search by insured name or policy number · history on every case. <span class="note">3</span></p>
+  <section class="notes"><h2>Design notes · My cases</h2><ol><li>A personal case list, organized by stage, with the next action pulled from the checklist.</li><li>Saved in a database on the private CM server and signed in with your Windows login. The whole CM team can view and edit, so handoffs and out-of-office coverage just work. IT/security to confirm data retention.</li><li>Mine / Team / Unassigned views, reassign, and a change history on every case.</li><li><b>Working vs not being worked</b> (round 7): cases you're actively working show <b>Resume</b> (opens Work mode). Cases that are ready, waiting on the field, or out for delivery are greyed out and show <b>View</b>, which opens the clean read-only View mode. Try the Arya Stark case (ready to issue).</li></ol></section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>

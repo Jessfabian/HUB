@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · MMSD Workstation (Option 2 · Side-by-side)</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="workstation" data-option="side">
+<main>
+  <div class="pagehead">
+    <div>
+      <p class="muted">MMSD · OPTION 2 — SIDE-BY-SIDE (workstation guides, IR workbench stays for data entry)</p>
+      <h1>Case B (sample label) <span class="note">1</span></h1>
+      <div>
+        <span class="pill dark">TPP</span><span class="pill">Term</span><span class="pill">eSigned</span><span class="pill">BOT reviewed</span>
+        <span class="pill">Owner: Corporation</span><span class="pill">Companion</span>
+      </div>
+    </div>
+    <div class="row">
+      <span class="seg"><button class="btn sm" data-mode="guided" aria-pressed="true">Guided</button><button class="btn sm" data-mode="expert" aria-pressed="false">Expert</button></span>
+      <a class="btn sm pri" href="ir-workbench.html">Open IR workbench ↗</a><span class="note">2</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Guide column -->
+    <section style="flex:1.1;min-width:0">
+      <div class="box" style="margin-bottom:12px">
+        <header><h3>Case profile (summary) <span class="note">3</span></h3><span class="btn sm" data-toggle="#profileEdit">Edit ▾</span></header>
+        <div id="profileEdit" hidden>
+          <div class="grid g3">
+            <label class="field">Product<span class="in">Term ▾</span></label>
+            <label class="field">Signature<span class="in">eSigned ▾</span></label>
+            <label class="field cond">BOT note?<span class="in">Yes ▾</span></label>
+            <label class="field">Owner<span class="in">Corporation ▾</span></label>
+            <label class="field">Related<span class="in">Companion ▾</span></label>
+            <label class="field">Firm<span class="in">Other ▾</span></label>
+          </div>
+        </div>
+        <p class="muted">Click Edit to change answers. The checklist updates instantly.</p>
+      </div>
+
+      <div class="tabs"><span class="on">Initial review</span><span>Interim</span><span>Issue</span><span>Delivery</span></div>
+      <div class="chev"><span class="done">Tableau &amp; ownership</span><span class="on">BOT note</span><span>Images</span><span>Replacements</span><span>Requirements</span><span>BINGO &amp; email</span></div>
+
+      <div class="step cond">
+        <h4>Act on the CaMPIR BOT note <span class="pill">BOT = Yes</span><span class="note">4</span></h4>
+        <p class="why">The BOT already swept requirements. Do what the note lists, then skip to Images. A Hold Issue may already be auto-created.</p>
+        <div class="check">Work each item in the BOT note</div>
+        <div class="check">Compare BOT risk class to signed illustration</div>
+        <div class="tools"><a class="btn sm" href="ir-workbench.html">Go to workbench › TreX review ↗</a></div>
+      </div>
+
+      <div class="step" style="opacity:.45">
+        <h4>Systematic requirement review <span class="pill">hidden when BOT = Yes</span></h4>
+        <p class="muted">Shown greyed here only for the wireframe. In the real page it is removed.</p>
+      </div>
+
+      <div class="step cond">
+        <h4>Corporate owner documents <span class="pill">Owner = Corporation</span></h4>
+        <div class="check">FR2057 complete; signer listed as an officer; seal or no-seal box</div>
+        <div class="check">Insured and signing-officer emails</div>
+        <div class="check">Leave Service Alert Needed open through issue</div>
+        <div class="tools"><a class="btn sm" href="tool-verbiage.html">Requirement wording ↗</a><span class="formchip">📎 FR2057 auto-attaches</span><span class="btn sm guided-only">Quest: Corporate-owned ↗</span></div>
+      </div>
+
+      <div class="step cond">
+        <h4>Companion handling <span class="pill">Related = Companion</span></h4>
+        <div class="check">Locate and review all companions; process together</div>
+        <div class="check">One IR email listing every policy number; save in each case</div>
+        <div class="tools"><a class="btn sm" href="ir-workbench.html">Workbench › Email ↗</a></div>
+      </div>
+    </section>
+
+    <!-- Workbench mapping -->
+    <aside class="stack" style="width:300px;flex:none">
+      <section class="box">
+        <h3>Jump into the IR workbench <span class="note">5</span></h3>
+        <table class="wf">
+          <tr><th>Workbench section</th><th>Used by steps</th></tr>
+          <tr><td><a href="ir-workbench.html">Case setup</a></td><td>1, 2</td></tr>
+          <tr><td><a href="ir-workbench.html">State requirements</a></td><td>5</td></tr>
+          <tr><td><a href="ir-workbench.html">TreX review</a></td><td>3, 4</td></tr>
+          <tr><td><a href="ir-workbench.html">Requirements</a></td><td>6</td></tr>
+          <tr><td><a href="ir-workbench.html">Amendments</a></td><td>7</td></tr>
+          <tr><td><a href="ir-workbench.html">BINGO</a></td><td>8</td></tr>
+          <tr><td><a href="ir-workbench.html">Email</a></td><td>9</td></tr>
+        </table>
+      </section>
+      <section class="box">
+        <h3>Watch-outs</h3>
+        <div class="check">FR2057 cannot be collected at delivery</div>
+        <div class="check">Companions: issue on the same day</div>
+      </section>
+      <section class="box expert-only">
+        <h3>Quest for this case</h3>
+        <div class="line m"></div><div class="line l"></div><div class="line s"></div>
+      </section>
+      <section class="box guided-only"><p class="muted">Quest links are on each step in Guided mode (same rule as Option 1).</p></section>
+    </aside>
+  </div>
+
+  <section class="notes">
+    <h2>Design notes · Option 2 (Side-by-side)</h2>
+    <ol>
+      <li>The workstation is a guide plus checklist. Data entry and output stay in the existing IR workbench, which is re-skinned to match (<a href="ir-workbench.html">see wireframe</a>).</li>
+      <li>One click opens the workbench (same case, new tab). Steps deep-link to the matching workbench section.</li>
+      <li>The profile collapses into a summary bar to give the checklist more room. Edit expands it (try it).</li>
+      <li>BOT example: when BOT = Yes, "Act on BOT note" appears and the manual sweep disappears.</li>
+      <li>A mapping table shows which workbench section supports which step.<br/><b>Trade-off:</b> less rebuilding now, but CMs work across two pages and two profile forms. Option 1 removes that duplication.</li>
+    </ol>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>
