@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WF · All screens</title>
+  <link rel="stylesheet" href="wireframe.css" />
+</head>
+<body data-page="index">
+<main>
+  <div class="pagehead"><div><p class="muted">WIREFRAME REVIEW · gray boxes only, no real data</p><h1>Case Manager Workstation: all screens</h1></div></div>
+
+  <div class="grid g2" style="margin-bottom:14px">
+    <section class="box">
+      <h3>How to review</h3>
+      <ol>
+        <li>Use the <b>yellow review bar</b> at the top to switch options. Your choices are remembered.</li>
+        <li><b>Sidebar:</b> collapse it with ☰ (top bar) or « (bottom of the sidebar).</li>
+        <li><b>View as:</b> CM or Manager. Manager shows the Team insights page.</li>
+        <li><b>Working as:</b> click your name (top right) to pick yourself from the roster.</li>
+        <li><b>Workstation:</b> 1 = Merged (workstation replaces the IR workbench) · 2 = Side-by-side (the workbench stays).</li>
+        <li><b>Notes:</b> hide the red numbered notes to see the clean layout.</li>
+        <li>On a workstation page, try <b>Guided / Expert</b>.</li>
+      </ol>
+    </section>
+    <section class="box">
+      <h3>Legend</h3>
+      <p><span class="legend">Conditional: appears only for certain case profiles</span></p>
+      <p><span class="note">1</span> Design note (explained at the bottom of each page)</p>
+      <p><span class="pill">pill</span> Profile tag or filter</p>
+      <div class="ph">Gray box = content placeholder</div>
+    </section>
+  </div>
+
+  <table class="wf">
+    <tr><th>Area</th><th>Screen</th><th>Purpose</th><th>Replaces today</th></tr>
+    <tr><td>Work</td><td><a href="home.html">Home</a></td><td>Resume cases, start a case, quick tools, reminders</td><td>home.html</td></tr>
+    <tr><td>Work</td><td><a href="workstation-merge.html">Workstation: Option 1 Merged</a></td><td>Guided + adaptive IR→Delivery checklist with tools built in</td><td>initial-review.html (retired)</td></tr>
+    <tr><td>Work</td><td><a href="workstation-side.html">Workstation: Option 2 Side-by-side</a></td><td>Retired (Option 1 chosen), kept for reference</td><td>—</td></tr>
+    <tr><td>Work</td><td><a href="ir-workbench.html">IR workbench (Option 2 only)</a></td><td>Retired (Option 1 chosen), kept for reference</td><td>—</td></tr>
+    <tr><td>Work</td><td><a href="my-wins.html">My wins</a></td><td>Private badges, streak, IR-time trend, kudos, celebrations</td><td>New (morale)</td></tr>
+    <tr><td>Top menu</td><td><a href="cm-profile.html">Profile &amp; settings</a></td><td>Working as (roster), details, training dates, timer / celebration settings</td><td>New</td></tr>
+    <tr><td>Work</td><td><a href="case-queue.html">My cases</a></td><td>Server-saved, team-shared case list + next action</td><td>mycases/cases.html</td></tr>
+    <tr><td>Tools</td><td><a href="tools-hub.html">Tools hub</a></td><td>Search/filter all standalone tools</td><td>New page</td></tr>
+    <tr><td>Tools</td><td><a href="tool-verbiage.html">Requirement verbiage</a></td><td>Generate requirement wording</td><td>verbiage-only.html</td></tr>
+    <tr><td>Tools</td><td><a href="tool-amendment.html">Amendment generator</a></td><td>Generate amendment wording</td><td>verbiage-only.html (amendments)</td></tr>
+    <tr><td>Tools</td><td><a href="tool-email.html">Email builder</a></td><td>Stage email templates</td><td>verbiage-only.html (email)</td></tr>
+    <tr><td>Tools</td><td><a href="tool-illustration.html">Illustration validator</a></td><td>Compare illustration to application</td><td>Illustration Validation app</td></tr>
+    <tr><td>Tools</td><td><a href="tool-save-age.html">Save Age calculator</a></td><td>Save Age date + eligibility</td><td>save-age.html (built day 1)</td></tr>
+    <tr><td>Tools</td><td><a href="tool-reissue.html">Reissue / change after approval</a></td><td>Before/after design, referral check, templates (CM + AM)</td><td>New; uses the 2 Outlook templates</td></tr>
+    <tr><td>Tools</td><td><a href="tool-state-forms.html">State &amp; replacement forms</a></td><td>State forms + replacement rules</td><td>IR state requirements section</td></tr>
+    <tr><td>Reference</td><td><a href="ref-forms-library.html">Forms library</a></td><td>Search forms; add as requirement</td><td>forms-library.html</td></tr>
+    <tr><td>Reference</td><td><a href="ref-underwriting.html">Underwriting quick ref</a></td><td>UW tables + link to UW Requirements Guide</td><td>UW.html</td></tr>
+    <tr><td>Reference</td><td><a href="ref-firm-directory.html">Firm directory</a></td><td>Firm/agency # → AM, backup, DocuSign approved; edit + import</td><td>New (round 5)</td></tr>
+    <tr><td>Every page</td><td>Ask Quest chatbot</td><td>Bottom-right button: friendly answers + Quest links</td><td>New (round 5)</td></tr>
+    <tr><td>Every page</td><td>Customize</td><td>Theme, dark mode, accent, text size, accessibility, per-page layout, personal sidebar</td><td>New (round 5)</td></tr>
+    <tr><td>Management</td><td><a href="mgmt-insights.html">Team insights</a></td><td>IR time trends by team, CM, new hire, and newly trained skill (managers only)</td><td>New (timer)</td></tr>
+  </table>
+
+  <section class="box" style="margin-top:14px">
+    <h3>Decisions</h3>
+    <div class="check">✔ Navigation: left sidebar, one collapse control (☰ in top bar)</div>
+    <div class="check">✔ Workstation: Option 1 (Merged)</div>
+    <div class="check">✔ Timer privacy approved</div>
+    <div class="check">✔ AM ↔ firm list: managers + AM team leads edit in site, plus sheet/report import (with DocuSign flag)</div>
+    <div class="check">✔ Missing roster emails: left blank</div>
+    <div class="check">Open: should "not DocuSign approved" add wet-sign steps, or only warn?</div>
+    <div class="check">Anything to add, remove, or rename on any screen?</div>
+  </section>
+</main>
+<script src="wireframe.js"></script>
+</body>
+</html>
